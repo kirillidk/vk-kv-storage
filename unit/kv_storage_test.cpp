@@ -96,9 +96,9 @@ namespace vk {
         auto result = storage.getManySorted("b", 3);
 
         ASSERT_EQ(result.size(), 3);
-        EXPECT_EQ(result[0], std::make_pair("b", "val_b"));
-        EXPECT_EQ(result[1], std::make_pair("c", "val_c"));
-        EXPECT_EQ(result[2], std::make_pair("d", "val_d"));
+        EXPECT_EQ(result[0], std::make_pair(std::string("b"), std::string("val_b")));
+        EXPECT_EQ(result[1], std::make_pair(std::string("c"), std::string("val_c")));
+        EXPECT_EQ(result[2], std::make_pair(std::string("d"), std::string("val_d")));
     }
 
     TEST_F(KVStorageTest, GetManySortedSkipsExpiredEntries) {
@@ -113,9 +113,9 @@ namespace vk {
         auto result = storage.getManySorted("a", 3);
 
         ASSERT_EQ(result.size(), 3);
-        EXPECT_EQ(result[0], std::make_pair("a", "val_a"));
-        EXPECT_EQ(result[1], std::make_pair("c", "val_c"));
-        EXPECT_EQ(result[2], std::make_pair("d", "val_d"));
+        EXPECT_EQ(result[0], std::make_pair(std::string("a"), std::string("val_a")));
+        EXPECT_EQ(result[1], std::make_pair(std::string("c"), std::string("val_c")));
+        EXPECT_EQ(result[2], std::make_pair(std::string("d"), std::string("val_d")));
     }
 
     TEST_F(KVStorageTest, RemoveOneExpiredEntry) {
