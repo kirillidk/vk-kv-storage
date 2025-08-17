@@ -6,3 +6,4 @@ class KVStorage(ConanFile):
 
     def requirements(self):
         self.requires("boost/1.88.0")
+        self.requires("gtest/1.16.0")
