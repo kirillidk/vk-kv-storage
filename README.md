@@ -115,7 +115,9 @@ conan install . --output-folder=build --build=missing
 2. Конфигурация и сборка:
 ```bash
 cd build
-cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
+cmake .. \
+  -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake \
+  -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 ```
 
