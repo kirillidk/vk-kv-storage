@@ -14,3 +14,4 @@ enable_testing()
 
 add_subdirectory(src)
 add_subdirectory(unit)
+add_subdirectory(example)
