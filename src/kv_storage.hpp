@@ -140,7 +140,7 @@ namespace vk {
 
             auto &exp_index = entries_.get<by_expiration>();
 
-            for (auto it = exp_index.upper_bound(0); it != exp_index.end(); ++it) {
+            if (auto it = exp_index.upper_bound(0); it != exp_index.end()) {
                 const auto &entry = *it;
 
                 if (isExpired(entry)) {

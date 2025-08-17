@@ -63,7 +63,7 @@ explicit KVStorage(std::span<std::tuple<std::string, std::string, uint32_t>> ent
 | `get()` | O(1) |
 | `remove()` | O(log n) |
 | `getManySorted()` | O(log n + count) |
-| `removeOneExpiredEntry()` | O(n) |
+| `removeOneExpiredEntry()` | O(log n) |
 
 Где:
 - `n` = общее количество записей
